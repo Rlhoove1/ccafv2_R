@@ -18,6 +18,7 @@ RUN R -e "install.packages(c('devtools','roxygen2'))"
 RUN R -e "install.packages(c('keras', 'plumber', 'yaml', 'base64enc', 'remotes', 'readr', 'writexl'))"
 RUN R -e "install.packages(c('BiocManager'))"
 RUN R -e "BiocManager::install('org.Hs.eg.db')"
+RUN R -e "BiocManager::install('glmGamPoi')"
 RUN R -e "BiocManager::install(c('org.Mm.eg.db'))"
 RUN R -e "devtools::install_github('plaisier-lab/ccafv2_R/ccAFv2')"
 RUN apt-get install -y vim
